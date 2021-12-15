@@ -57,5 +57,8 @@
   padding: 10px;
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(41, 196, 41);
+}
+
+::placeholder {
+  color: brown;
 }
