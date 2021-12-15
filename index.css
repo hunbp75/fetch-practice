@@ -17,28 +17,36 @@
 
 #temporary {
   width: 800px;
-  height: 60px;
-  background-color: chartreuse;
+  height: 50px;
+  background-color: beige;
+  margin-left: 80px;
+  text-align: center;
+  padding-top: 10px;
 }
 #humidity {
-  width: 200px;
+  width: 800px;
   height: 50px;
-  background-color: chartreuse;
+  background-color: beige;
+  margin-left: 80px;
+  text-align: center;
+  padding-top: 10px;
 }
 #clouds {
-  width: 200px;
+  width: 800px;
   height: 50px;
-  background-color: chartreuse;
+  background-color: beige;
+  margin-left: 80px;
+  text-align: center;
+  padding-top: 10px;
 }
-#clouds {
-  width: 200px;
-  height: 50px;
-  background-color: rgb(114, 116, 112);
-}
+
 #town {
-  width: 200px;
+  width: 800px;
   height: 50px;
-  background-color: rgb(218, 201, 209);
+  background-color: beige;
+  margin-left: 80px;
+  text-align: center;
+  padding-top: 10px;
 }
 #input {
   position: relative;
@@ -47,6 +55,7 @@
   width: 600px;
   text-align: center;
   padding: 10px;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
+  color: rgb(41, 196, 41);
 }
