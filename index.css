@@ -1,3 +1,46 @@
-#app.container {
-  background-color: blueviolet;
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+#app-container {
+  position: relative;
+  width: 40%;
+  padding-top: 25px;
+  background-color: rgb(84, 88, 88);
+  opacity: 0.8;
+}
+
+#temporary {
+  width: 800px;
+  height: 60px;
+  background-color: chartreuse;
+}
+#humidity {
+  width: 200px;
+  height: 50px;
+  background-color: chartreuse;
+}
+#clouds {
+  width: 200px;
+  height: 50px;
+  background-color: chartreuse;
+}
+#clouds {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(114, 116, 112);
+}
+#town {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(218, 201, 209);
+}
+#input {
+  position: relative;
+  text-align: center;
 }
