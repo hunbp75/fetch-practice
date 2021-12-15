@@ -5,6 +5,7 @@ function createDom() {
   let input = document.createElement("input");
   input.id = "input";
   input.type = "text";
+  input.placeholder = "Type your city here";
 
   let city = document.createElement("h1");
   city.id = "town";

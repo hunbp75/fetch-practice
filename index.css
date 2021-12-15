@@ -42,5 +42,11 @@
 }
 #input {
   position: relative;
+  top: 10%;
+  left: 18%;
+  width: 600px;
   text-align: center;
+  padding: 10px;
+  font-size: 3rem;
+  font-weight: bold;
 }
