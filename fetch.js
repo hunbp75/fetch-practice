@@ -5,6 +5,8 @@ let skyCondition = document.querySelector(".skyCondition");
 let humidity = document.querySelector(".humidity");
 let button = document.querySelector(".submit");
 
+function createDom() {}
+
 button.addEventListener("click", function (name) {
   let search = new URLSearchParams();
   search.append("key", "6664ed8bd58945d3b8a194201211412");
