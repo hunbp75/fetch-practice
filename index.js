@@ -5,7 +5,7 @@ function createDom() {
   let input = document.createElement("input");
   input.id = "input";
   input.type = "text";
-  input.placeholder = "Type your city here";
+  input.placeholder = "Type your city";
 
   let city = document.createElement("h1");
   city.id = "town";
@@ -19,8 +19,11 @@ function createDom() {
   let clouds = document.createElement("h1");
   clouds.id = "clouds";
 
+  let time = document.createElement("h1");
+  time.id = "localtime";
+
   $("#root").append(appContainer);
-  appContainer.append(input, city, temp, humidity, clouds);
+  appContainer.append(input, time, city, temp, humidity, clouds);
 }
 
 function fetchApi() {
@@ -29,6 +32,7 @@ function fetchApi() {
   let temporary = document.querySelector("#temporary");
   let skyCondition = document.querySelector("#clouds");
   let humidity = document.querySelector("#humidity");
+  let localTime = document.querySelector("#localtime");
 
   input.addEventListener("change", function (name) {
     let search = new URLSearchParams();
@@ -40,14 +44,17 @@ function fetchApi() {
       .then((response) => response.json())
       .then((data) => {
         let nameValue = data.location.name;
+        let countryValue = data.location.country;
         let temporaryValue = data.current.temp_c;
         let skyConditionValue = data.current.condition.text;
         let humidityValue = data.current.humidity;
+        let localtimeValue = data.location.localtime;
 
-        cityName.innerHTML = nameValue;
-        temporary.innerHTML = "Temporary: " + temporaryValue;
+        localTime.innerHTML = "Date: " + localtimeValue;
+        cityName.innerHTML = nameValue + " , " + countryValue;
+        temporary.innerHTML = "Temporary: " + temporaryValue + " " + "℃";
         skyCondition.innerHTML = "Sky condition: " + skyConditionValue;
-        humidity.innerHTML = "Humidity: " + humidityValue;
+        humidity.innerHTML = "Humidity: " + humidityValue + " " + "%";
 
         input.value = "";
       })

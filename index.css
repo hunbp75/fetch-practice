@@ -9,54 +9,84 @@
 
 #app-container {
   position: relative;
-  width: 40%;
+  width: 800px;
   padding-top: 25px;
   background-color: rgb(84, 88, 88);
   opacity: 0.8;
 }
 
 #temporary {
-  width: 800px;
+  position: relative;
+  top: 0%;
+  left: 0;
+  transform: translate(46%, 5%);
+  width: 420px;
   height: 50px;
   background-color: beige;
-  margin-left: 80px;
+
   text-align: center;
   padding-top: 10px;
 }
 #humidity {
-  width: 800px;
+  position: relative;
+  top: 0%;
+  left: 0;
+  transform: translate(46%, 5%);
+  width: 420px;
   height: 50px;
   background-color: beige;
-  margin-left: 80px;
+
   text-align: center;
   padding-top: 10px;
 }
 #clouds {
-  width: 800px;
+  position: relative;
+  top: 0%;
+  left: 0;
+  transform: translate(46%, 5%);
+  width: 420px;
   height: 50px;
   background-color: beige;
-  margin-left: 80px;
+
   text-align: center;
   padding-top: 10px;
 }
 
 #town {
-  width: 800px;
+  position: relative;
+  top: 0%;
+  left: 0;
+  transform: translate(46%, 5%);
+  width: 420px;
   height: 50px;
   background-color: beige;
-  margin-left: 80px;
+
   text-align: center;
   padding-top: 10px;
 }
 #input {
   position: relative;
-  top: 10%;
-  left: 18%;
-  width: 600px;
+  top: 0%;
+  left: 0;
+  transform: translate(45%, 5%);
+  width: 400px;
   text-align: center;
   padding: 10px;
   font-size: 2rem;
   font-weight: bold;
+}
+
+#localtime {
+  position: relative;
+  top: 0%;
+  left: 0;
+  transform: translate(46%, 5%);
+  width: 420px;
+  height: 50px;
+  background-color: beige;
+
+  text-align: center;
+  padding-top: 10px;
 }
 
 ::placeholder {
