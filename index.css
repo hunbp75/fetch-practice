@@ -30,7 +30,7 @@ body {
   background-color: rgb(207, 207, 204, 0.5);
   border-radius: 10px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 #humidity {
   position: relative;
@@ -42,7 +42,7 @@ body {
   background-color: rgb(207, 207, 204, 0.5);
   border-radius: 10px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 #clouds {
   position: relative;
@@ -54,7 +54,7 @@ body {
   background-color: rgb(207, 207, 204, 0.5);
   border-radius: 10px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 #town {
@@ -67,10 +67,10 @@ body {
   background-color: rgb(207, 207, 204, 0.5);
   border-radius: 10px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 #input {
-  position: relative;
+  position: sticky;
   top: 0%;
   left: 0;
   transform: translate(17%, 5%);
@@ -85,7 +85,7 @@ body {
 
 #localtime {
   position: relative;
-  top: 0%;
+  top: 0;
   left: 0;
   transform: translate(17%, 5%);
   width: 600px;
@@ -93,13 +93,17 @@ body {
   background-color: rgb(207, 207, 204, 0.5);
   border-radius: 10px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 ::placeholder {
   color: rgb(114, 106, 106);
 }
 
+/*
 #auto {
-  color: red;
+  color: rgba(36, 1, 1);
+  font-size: 2rem;
+  text-align: center;
 }
+*/
