@@ -57,6 +57,26 @@ function fetchApi() {
         humidity.innerHTML = "Humidity: " + humidityValue + " " + "%";
 
         input.value = "";
+
+        if (
+          skyConditionValue === "sunny" ||
+          ("partly cloudly" && temporaryValue > 20)
+        ) {
+          $("body").css(
+            "background-image",
+            "url(/pexels-brett-sayles-912364.jpg)"
+          );
+        } else if (temporaryValue < 5) {
+          $("body").css(
+            "background-image",
+            "url(/pexels-james-wheeler-1571442.jpg)"
+          );
+        } else if (5 < temporaryValue || temporaryValue >= 20) {
+          $("body").css(
+            "background-image",
+            "url(/pexels-stijn-dijkstra-2499793.jpg)"
+          );
+        }
       })
 
       .catch((err) => alert("Wrong city name!"));

@@ -1,3 +1,8 @@
+body {
+  background-image: url("pexels-johannes-plenio-1118873.jpg");
+  background-size: cover;
+}
+
 #root {
   display: flex;
   align-items: center;
@@ -11,8 +16,7 @@
   position: relative;
   width: 800px;
   padding-top: 25px;
-  background-color: rgb(84, 88, 88);
-  opacity: 0.8;
+  background-color: rgb(84, 88, 88, 0.5);
   border-radius: 15px;
 }
 
