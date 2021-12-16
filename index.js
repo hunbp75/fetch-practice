@@ -70,15 +70,19 @@ const fetchApi = () => {
             "background-image",
             "url(/pexels-brett-sayles-912364.jpg)"
           );
-        } else if (temporaryValue < 5) {
+        } else if (temporaryValue < 5 && temporaryValue > 0) {
+          $("body").css(
+            "background-image",
+            "url(/pexels-anton-belitskiy-10556555.jpg)"
+          );
+        } else if (5 < temporaryValue && temporaryValue <= 10) {
+          $("body").css("background-image", "url(/pexels-pixabay-33109.jpg)");
+        } else if (10 < temporaryValue && temporaryValue <= 20) {
+          $("body").css("background-image", "url(/pexels-pixabay-35857.jpg)");
+        } else if (temporaryValue < -1) {
           $("body").css(
             "background-image",
             "url(/pexels-james-wheeler-1571442.jpg)"
-          );
-        } else if (5 < temporaryValue || temporaryValue >= 20) {
-          $("body").css(
-            "background-image",
-            "url(/pexels-stijn-dijkstra-2499793.jpg)"
           );
         }
       })
