@@ -1,54 +1,54 @@
 function createDom() {
-  let appContainer = document.createElement("div");
+  const appContainer = document.createElement("div");
   appContainer.id = "app-container";
 
-  let input = document.createElement("input");
+  const input = document.createElement("input");
   input.id = "input";
   input.type = "text";
   input.placeholder = "Type your city";
 
-  let city = document.createElement("h1");
+  const city = document.createElement("h1");
   city.id = "town";
 
-  let temp = document.createElement("h1");
+  const temp = document.createElement("h1");
   temp.id = "temporary";
 
-  let humidity = document.createElement("h1");
+  const humidity = document.createElement("h1");
   humidity.id = "humidity";
 
-  let clouds = document.createElement("h1");
+  const clouds = document.createElement("h1");
   clouds.id = "clouds";
 
-  let time = document.createElement("h1");
+  const time = document.createElement("h1");
   time.id = "localtime";
 
   $("#root").append(appContainer);
   appContainer.append(input, time, city, temp, humidity, clouds);
 }
 
-function fetchApi() {
-  let input = document.querySelector("#input");
-  let cityName = document.querySelector("#town");
-  let temporary = document.querySelector("#temporary");
-  let skyCondition = document.querySelector("#clouds");
-  let humidity = document.querySelector("#humidity");
-  let localTime = document.querySelector("#localtime");
+const fetchApi = () => {
+  const input = document.querySelector("#input");
+  const cityName = document.querySelector("#town");
+  const temporary = document.querySelector("#temporary");
+  const skyCondition = document.querySelector("#clouds");
+  const humidity = document.querySelector("#humidity");
+  const localTime = document.querySelector("#localtime");
 
   input.addEventListener("change", function (name) {
-    let search = new URLSearchParams();
+    const search = new URLSearchParams();
     search.append("key", "6664ed8bd58945d3b8a194201211412");
     search.append("q", input.value);
-    let fetchURL = `https://api.weatherapi.com/v1/current.json?${search.toString()}`;
+    const fetchURL = `https://api.weatherapi.com/v1/current.json?${search.toString()}`;
 
     fetch(fetchURL)
       .then((response) => response.json())
       .then((data) => {
-        let nameValue = data.location.name;
-        let countryValue = data.location.country;
-        let temporaryValue = data.current.temp_c;
-        let skyConditionValue = data.current.condition.text;
-        let humidityValue = data.current.humidity;
-        let localtimeValue = data.location.localtime;
+        const nameValue = data.location.name;
+        const countryValue = data.location.country;
+        const temporaryValue = data.current.temp_c;
+        const skyConditionValue = data.current.condition.text;
+        const humidityValue = data.current.humidity;
+        const localtimeValue = data.location.localtime;
 
         localTime.innerHTML = "Date: " + localtimeValue;
         cityName.innerHTML = nameValue + " , " + countryValue;
@@ -81,7 +81,7 @@ function fetchApi() {
 
       .catch((err) => alert("Wrong city name!"));
   });
-}
+};
 
 function main() {
   createDom();
