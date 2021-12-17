@@ -85,9 +85,7 @@ const fetchApi = () => {
             "url(/pexels-james-wheeler-1571442.jpg)"
           );
         }
-      })
-
-      .catch((err) => alert("Wrong city name!"));
+      });
   });
 };
 
